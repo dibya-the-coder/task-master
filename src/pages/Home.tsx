@@ -97,7 +97,7 @@ const Home = () => {
               >
                 <Box
                   component="img"
-                  src="/task-management.svg"
+                  src="task-management.svg"
                   alt="Task Management"
                   sx={{
                     width: '100%',

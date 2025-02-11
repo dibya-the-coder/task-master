@@ -7,6 +7,8 @@
   
   [Demo](https://taskmaster-demo.vercel.app) · [Report Bug](https://github.com/yourusername/taskmaster/issues) · [Request Feature](https://github.com/yourusername/taskmaster/issues)
 
+  🌐 **Live Demo:** [TaskMaster App](https://dibya-the-coder.github.io/task-master/)
+
 </div>
 
 <div align="center">
