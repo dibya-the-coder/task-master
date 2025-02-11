@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom';
 import { useAppSelector } from '../store/hooks';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-function NavLink({ to, children }: { to: string; children: React.ReactNode }) {
+function SocialLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
-    <Link
-      to={to}
+    <a
+      href={to}
+      target="_blank"
+      rel="noopener noreferrer"
       className="transition-colors duration-200 hover:text-blue-500"
     >
       {children}
-    </Link>
+    </a>
   )
 }
 
@@ -25,11 +28,14 @@ export function Footer() {
     `}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-          {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium">
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/projects">Projects</NavLink>
-            <NavLink to="/dashboard">Dashboard</NavLink>
+          {/* Social Links */}
+          <div className="flex gap-6 text-xl">
+            <SocialLink to="https://github.com/dibya-the-coder">
+              <FaGithub />
+            </SocialLink>
+            <SocialLink to="https://www.linkedin.com/in/dibya-ranjan-rout-8b5b4b1b0/">
+              <FaLinkedin />
+            </SocialLink>
           </div>
 
           {/* Logo */}
