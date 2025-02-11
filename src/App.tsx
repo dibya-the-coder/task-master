@@ -3,7 +3,7 @@ import { useAppSelector } from './store/hooks';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './store/store';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -76,6 +76,7 @@ function App() {
                   <Route path="/todos" element={<TodoList />} />
                   <Route path="/add-todo" element={<AddTodo />} />
                   <Route path="/about" element={<About />} />
+                  <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
               </main>
               <Footer />
