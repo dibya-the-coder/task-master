@@ -3,7 +3,7 @@ import { useAppSelector } from './store/hooks';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './store/store';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -65,7 +65,7 @@ function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>
+        <Router>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <div className="min-h-screen flex flex-col">
@@ -83,7 +83,7 @@ function App() {
               <Footer />
             </div>
           </ThemeProvider>
-        </BrowserRouter>
+        </Router>
       </PersistGate>
     </Provider>
   );

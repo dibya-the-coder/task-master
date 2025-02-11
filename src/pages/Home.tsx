@@ -2,6 +2,8 @@ import { Container, Typography, Box, Button, Grid } from '@mui/material';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import { Link } from 'react-router-dom';
 
+const heroImage = '/task-master/task-management.svg';  // Updated path for GitHub Pages
+
 const Home = () => {
   return (
     <>
@@ -97,7 +99,7 @@ const Home = () => {
               >
                 <Box
                   component="img"
-                  src="task-management.svg"
+                  src={heroImage}
                   alt="Task Management"
                   sx={{
                     width: '100%',
