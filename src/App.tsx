@@ -73,6 +73,7 @@ function App() {
               <main className="flex-grow">
                 <Routes>
                   <Route path="/" element={<Home />} />
+                  <Route path="/task-master" element={<Home />} />
                   <Route path="/todos" element={<TodoList />} />
                   <Route path="/add-todo" element={<AddTodo />} />
                   <Route path="/about" element={<About />} />
