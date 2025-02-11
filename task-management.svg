@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <style>
+    .floating {
+      animation: float 6s ease-in-out infinite;
+    }
+    .rotating {
+      transform-origin: center;
+      animation: rotate 12s linear infinite;
+    }
+    .pulsing {
+      animation: pulse 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.5; }
+    }
+    .st0 { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+    .st1 { fill: currentColor; opacity: 0.1; }
+    .st2 { fill: currentColor; }
+  </style>
+  
+  <g style="color:#3b82f6" class="floating">
+    <!-- Main Board -->
+    <rect x="200" y="100" width="400" height="400" rx="20" class="st1"/>
+    
+    <!-- Decorative Circles -->
+    <g class="rotating">
+      <circle cx="400" cy="300" r="150" class="st0" stroke-dasharray="15,15"/>
+    </g>
+    
+    <!-- Task Items -->
+    <g>
+      <!-- Task Item 1 -->
+      <rect x="250" y="150" width="300" height="60" rx="10" class="st0"/>
+      <circle cx="280" cy="180" r="12" class="pulsing st2"/>
+      <line x1="320" y1="180" x2="520" y2="180" class="st0"/>
+      
+      <!-- Task Item 2 -->
+      <rect x="250" y="230" width="300" height="60" rx="10" class="st0"/>
+      <circle cx="280" cy="260" r="12" class="pulsing st2"/>
+      <line x1="320" y1="260" x2="520" y2="260" class="st0"/>
+      
+      <!-- Task Item 3 -->
+      <rect x="250" y="310" width="300" height="60" rx="10" class="st0"/>
+      <circle cx="280" cy="340" r="12" class="pulsing st2"/>
+      <line x1="320" y1="340" x2="520" y2="340" class="st0"/>
+      
+      <!-- Task Item 4 -->
+      <rect x="250" y="390" width="300" height="60" rx="10" class="st0"/>
+      <circle cx="280" cy="420" r="12" class="pulsing st2"/>
+      <line x1="320" y1="420" x2="520" y2="420" class="st0"/>
+    </g>
+    
+    <!-- Decorative Elements -->
+    <g class="rotating" style="transform-origin: 400px 300px">
+      <circle cx="400" cy="300" r="180" class="st0" stroke-dasharray="10,20"/>
+    </g>
+    
+    <!-- Small Floating Elements -->
+    <g class="floating" style="animation-delay: -2s">
+      <circle cx="150" cy="150" r="10" class="st2"/>
+      <circle cx="650" cy="450" r="10" class="st2"/>
+      <circle cx="200" cy="550" r="8" class="st2"/>
+      <circle cx="600" cy="50" r="8" class="st2"/>
+    </g>
+  </g>
+</svg> 
